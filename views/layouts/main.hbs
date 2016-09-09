@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <meta name="description" content="{{description}}"> 
+    <meta name="keywords" content="{{keywords}}"> 
+
+    <!-- css -->
+	<!-- <link rel="stylesheet/less" href="css/app.less"> -->	
+	<link rel="stylesheet" href="css/vendor.css">
+	<link rel="stylesheet" href="css/lib.css">
+	<link rel="stylesheet" href="build/css/app.css">
+
+	<!-- vendor -->
+    <script src="vendor/jquery-3.1.0.min.js"></script>
+    <script src="vendor/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script> 
+	<!-- <script src="vendor/less.min.js"></script> -->
+	<script src="build/js/paralax.js"></script>
+	<script src="http://maps.googleapis.com/maps/api/js"></script>
+
+	<!-- tables -->
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+    <script type="text/javascript" src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script src="build/js/table.js"></script>
+</head>
+<body>	
+	<header>
+		<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+			<div class="container clearfix">
+			    <div class="navbar-header">							
+					<button type="button" class="navbar-toggle collapsed " data-toggle="collapse" data-target="#navbar-mobile" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<div class="pull-right">
+						<a href="tel:+380972070005" class="phone">
+							<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+							<span class="number">097-207-00-05</span>
+						</a>
+					</div>
+					<a href="/" class="logo">
+						<img src="img/logo.png">
+					</a>
+			    </div>
+				<div class="collapse navbar-collapse" id="navbar-mobile">
+					<div class="pull-left">
+						<div class="pull-left">	
+							<a href="/" class="logo">
+								<img src="img/logo.png">
+							</a>
+						</div>
+						<ul class="nav navbar-nav navbar pull-left">
+				          <li class="active"><a href="/about">O компании</a></li>
+				          <li><a href="/delivery">Доставка</a></li>
+				          <li><a href="/works">Наши работы</a></li>
+				          <li><a href="#" data-toggle="modal" data-target="#myModal">Обратная связь</a></li>
+				          <li><a href="/contacts">Контакты</a></li>
+			  			</ul>
+					</div>
+					<div class="pull-right">
+						<a href="tel:+380972070005" class="phone">
+							<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+							097-207-00-05
+						</a>
+					</div>
+				</div>
+				
+			</div>
+		</nav>
+	</header>
+
+	{{{body}}}
+
+	<!-- modal -->
+	<div id="myModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Мы Вам позвоним!</h4>
+				</div>
+				<div class="modal-body">
+					<form id="contactForm" method="POST" action="/feedback">
+						<input type="text" name="name" class="form-control" placeholder="Имя*" required>		
+						<input type="tel" name="phone" class="form-control" placeholder="Телефон*" required>		
+						<input type="email" name="email" class="form-control" placeholder="Email">
+						<textarea name="comment" class="form-control" rows="3" placeholder="Комментарий"></textarea>	
+						<p>*Отмечены обязательные поля</p>
+						<button type="submit" class="btn btn-custom">Готово</button>
+					</form>
+				</div>      
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="container">
+			<ul class="footer-nav navbar-nav nav">
+				<li><a href="/delivery">Доставка</a></li>
+				<li><a href="/works">Наши работы</a></li>
+				<li><a href="#" data-toggle="modal" data-target="#myModal">Обратная связь</a></li>
+				<li><a href="/contacts">Контакты</a></li>
+			</ul>
+			<p>Copyright © 2016 Fasad-Pro All Rights Reserved.</p>
+		</div>		
+	</footer>		
+	<script src="build/js/header.js"></script>
+</body>
